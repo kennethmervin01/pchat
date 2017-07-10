@@ -1,7 +1,7 @@
 {
-  "name": "react-with-semantic",
+  "name": "pchat",
   "version": "1.0.0",
-  "description": "Simple React BoilerPlate with Semantic Ui",
+  "description": "A Chat app good for Secrets",
   "scripts": {
      "build-dev": "webpack --config webpack/webpack.config.js -d --watch",
      "server": "webpack-dev-server --config webpack/webpack.config.js  --progress --inline --hot -d",
