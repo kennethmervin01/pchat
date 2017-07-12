@@ -6,7 +6,8 @@ import ChatCreator from 'containers/ChatCreator'
 const Routes = () => (
 	<Switch>
 		<Route exact path="/" component={Home} />
-		<Route exact path="/create" component={ChatCreator} />
+		<Route path="/home" component={Home} />
+		<Route path="/create" component={ChatCreator} />
 	</Switch>
 )
 

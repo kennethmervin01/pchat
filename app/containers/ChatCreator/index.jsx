@@ -1,15 +1,31 @@
 import React from 'react'
-import { Segment, Form, Button } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { setClient } from 'actions/client'
+import PropTypes from 'prop-types'
+import { Segment } from 'semantic-ui-react'
+import ChatCreatorForm from './ChatCreatorForm'
 
-const ChatCreator = () => (
+const ChatCreator = ({ handleClick, client }) => (
 	<Segment>
-		<h3>Create your Secret Chat Room</h3>
-		<Form>
-			<Form.Input label="Chatroom Name" type="text" />
-			<Form.Input label="Create Password" type="password" />
-			<Button primary>Create</Button>
-		</Form>
+		<ChatCreatorForm handleClick={handleClick} client={client} />
 	</Segment>
 )
 
-export default ChatCreator
+const mapStateToProps = state => (
+	{
+		client: state.client,
+	}
+)
+
+const mapDispatchToProps = dispatch => ({
+	handleClick: () => {
+		dispatch(setClient())
+	},
+})
+
+ChatCreator.propTypes = {
+	handleClick: PropTypes.func.isRequired,
+	client: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChatCreator)

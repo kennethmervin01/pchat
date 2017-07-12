@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A Chat app good for Secrets",
   "scripts": {
-     "build-dev": "webpack --config webpack/webpack.config.js -d --watch",
-     "server": "webpack-dev-server --config webpack/webpack.config.js  --progress --inline --hot -d",
-     "build": "set NODE_ENV=production & webpack --config webpack/webpack.config.production.js -p --progress"
+    "build-dev": "webpack --config webpack/webpack.config.js -d --watch",
+    "server": "webpack-dev-server --config webpack/webpack.config.js  --progress --inline --hot -d",
+    "build": "set NODE_ENV=production & webpack --config webpack/webpack.config.production.js -p --progress"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/kennethmervin01/react-with-semantic#readme",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "history": "^4.6.3",
     "prop-types": "^15.5.10",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
